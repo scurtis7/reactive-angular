@@ -1,0 +1,16 @@
+# application properties
+
+server:
+  port: 8080
+
+logging:
+  level:
+    root: INFO
+    com:
+      scurtis: TRACE
+
+spring:
+  r2dbc:
+    url: r2dbc:postgresql://localhost:5432/postgres
+    username: curtis
+    password: curtis
