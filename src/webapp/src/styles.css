@@ -3,3 +3,12 @@
 .body {
   background-color: #282c34;
 }
+
+.main-page {
+  padding: 10px;
+}
+
+.badge-info {
+  background-color: #282c34;
+  color: #cfd8dc;
+}
