@@ -15,14 +15,14 @@ export class MainComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.stocks = [
-      { 'symbol': 'AAPL', 'name': 'Apple', 'description': 'Apple Incorporated' },
-      { 'symbol': 'MA', 'name': 'Mastercard', 'description': 'Mastercard Incorporated' },
-      { 'symbol': 'NFLX', 'name': 'Netflix', 'description': 'Netflix Incorporated' },
-      { 'symbol': 'PAYC', 'name': 'Paycom', 'description': 'Paycom Incorporated' }
-    ];
-    // this.stockService.list()
-    //   .subscribe(results => this.stocks = results);
+    // this.stocks = [
+    //   { 'symbol': 'AAPL', 'name': 'Apple', 'description': 'Apple Incorporated' },
+    //   { 'symbol': 'MA', 'name': 'Mastercard', 'description': 'Mastercard Incorporated' },
+    //   { 'symbol': 'NFLX', 'name': 'Netflix', 'description': 'Netflix Incorporated' },
+    //   { 'symbol': 'PAYC', 'name': 'Paycom', 'description': 'Paycom Incorporated' }
+    // ];
+    this.stockService.list()
+      .subscribe(results => this.stocks = results);
   }
 
   getQuote(symbol: string) {

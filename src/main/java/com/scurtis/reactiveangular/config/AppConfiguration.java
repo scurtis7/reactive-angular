@@ -1,5 +1,6 @@
 package com.scurtis.reactiveangular.config;
 
+import com.scurtis.reactiveangular.route.StockHandler;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -19,6 +20,11 @@ import static org.springframework.web.reactive.function.server.ServerResponse.ok
 
 @Configuration
 public class AppConfiguration {
+
+    @Bean
+    public StockHandler stockHandler() {
+        return new StockHandler();
+    }
 
     @Bean
     public RouterFunction<ServerResponse> htmlRouter(@Value("classpath:/public/index.html") Resource html) {
