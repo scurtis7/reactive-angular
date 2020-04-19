@@ -1,3 +1,8 @@
 <div>
   <h1><span class="badge badge-info">Main</span></h1>
+  <ul class="stocks">
+    <li *ngFor="let stock of stocks">
+      {{stock.symbol}} - {{stock.name}} - {{stock.description}}
+    </li>
+  </ul>
 </div>
